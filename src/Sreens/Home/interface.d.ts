@@ -1,0 +1,3 @@
+interface HomeScreenProps {
+  navigation: any
+}
