@@ -32,7 +32,7 @@ export default class CitiesList extends Component<CitiesListProps, CitiesListSta
         <FlatList
           data={this.state.cities}
           renderItem={({ item }) =>
-            <CityCard {...item} onSelectCity={() => this.props.navigation.navigate('Home',
+            <CityCard {...item} onSelectCity={() => this.props.navigation.navigate('Hotels',
               {
                 ...item
               })} />

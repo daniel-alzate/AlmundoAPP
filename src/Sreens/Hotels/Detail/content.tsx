@@ -34,16 +34,12 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
 
   render() {
 
-    console.log(this.state.hotelDetail)
-
     const { name, stars, price } = this.props.navigation.state.params;
 
     const { hotelDetail } = this.state;
 
     return (
       <View >
-
-        {console.log('log', hotelDetail)}
 
         {hotelDetail === "" ? <ActivityIndicator size='large' color='rgba(255, 143, 41, 1.0)' /> :
 

@@ -20,6 +20,17 @@ export const getHotels = async () => {
     }
 }
 
+export const getHotelsByCity = async (id:String) => {
+    try {
+        const response = await fetch(`${url}/hotelsByCity/${id}`)
+        console.log(response)
+        const responseJson = await response.json()
+        return responseJson.hotelsByCity
+    } catch (error) {
+        console.error(error)
+    }
+}
+
 export const getHotelDetail = async (id:String) => {
     try {
         const response = await fetch(`${url}/hotelDetail/${id}`)

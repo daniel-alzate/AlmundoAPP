@@ -4,7 +4,7 @@
 
 import React, { Component } from 'react';
 import HotelCard from '../../../Components/Hotels/Card'
-import { getHotels } from '../../../Services'
+import { getHotels, getHotelsByCity } from '../../../Services'
 import styles from './style'
 import {
   View,
@@ -21,7 +21,11 @@ export default class HotelList extends Component<HotelListProps, HotelListState>
   }
 
   componentDidMount() {
-    getHotels().then(hotels => this.setState({ hotels: hotels }))
+    if (this.props.navigation.state.params) {
+      getHotelsByCity(this.props.navigation.state.params._id).then(hotels => this.setState({ hotels: hotels }))
+    } else {
+      getHotels().then(hotels => this.setState({ hotels: hotels }))
+    }
   }
 
   render() {
