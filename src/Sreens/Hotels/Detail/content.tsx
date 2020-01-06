@@ -53,7 +53,7 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
               data={hotelDetail.images}
               horizontal={true}
               showsHorizontalScrollIndicator={false}
-              // keyExtractor={(item: any) => item.code}
+              keyExtractor={(item: any, index) => item+index}
               renderItem={({ item }) =>
                 <Image
                   style={{ width: 400, height: 200 }}

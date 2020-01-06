@@ -17,7 +17,7 @@ export default ({ amenities, customStyle }: AmenitiesProps) => {
         data={amenities}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
-        keyExtractor={(item: any) => item.key}
+        keyExtractor={(item, index) => item+index}
         renderItem={({ item }) =>
           <Icon name={item} size={20} color="#616161" />
         } />

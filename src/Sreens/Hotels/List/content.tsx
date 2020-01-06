@@ -29,6 +29,7 @@ export default class HotelList extends Component<HotelListProps, HotelListState>
       <View style={styles.container}>
 
         <FlatList
+          keyExtractor={item => item._id}
           data={this.state.hotels}
           renderItem={({ item }) =>
             <HotelCard {...item} onSelectHotel={() => this.props.navigation.navigate('Detail',

@@ -10,7 +10,7 @@ export default ({ styleStar, score }: IPropsStarRaiting) => {
     return (
         score > 0 ?
             <View style={styles.containerStars}>
-                {NumberToArray[score].map(() => <Icon name="star" size={25} color={"#ffc400"} />)}
+                {NumberToArray[score].map((el: any, index: any) => <Icon key={'mykey' + index} name="star" size={25} color={"#ffc400"} />)}
             </View>
             : null
     )
