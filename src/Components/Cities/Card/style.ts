@@ -6,9 +6,9 @@ export default StyleSheet.create({
         backgroundColor: Colors.white,
         marginVertical: 8,
         marginHorizontal: 16,
-        height: 300,
+        height: 50,
         borderRadius: 5,
-        flexDirection: 'column',
+        flexDirection: 'column'
     },
     image: {
         flex: 1,
@@ -23,25 +23,5 @@ export default StyleSheet.create({
         fontSize: 16,
         fontWeight: "bold",
         color: Colors.grey900
-    },
-    starsSection: {
-        marginVertical: 5,
-        flexDirection: 'row',
-    },
-    amenitiesSection: {
-        flexDirection: 'row',
-        alignItems: "flex-end"
-    },
-    priceDescription: {
-        fontSize: 14,
-        color: Colors.grey700,
-        alignItems: "center"
-    },
-    priceContainer: {
-        flexDirection: 'row',
-        alignItems: "flex-end"
-    },
-    boldFont: {
-        fontSize: 20
     }
 })

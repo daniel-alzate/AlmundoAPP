@@ -4,5 +4,6 @@ export interface HotelCardProps {
   stars: number,
   image: string,
   price: number,
+  amenities: Array<string>
   onSelectHotel: Function
 }

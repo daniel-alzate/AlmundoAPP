@@ -26,13 +26,14 @@ export default StyleSheet.create({
         padding: 15,
         backgroundColor: Colors.white
     },
-
+    subLocationSection: {
+        flexDirection:"row",
+        marginVertical:10
+    },
     descriptionSection: {
         marginTop: 2,
-
         backgroundColor: Colors.white,
         padding: 15,
-
         flexDirection: 'column',
     },
     styBoxHome: {

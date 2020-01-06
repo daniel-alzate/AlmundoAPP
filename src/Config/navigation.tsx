@@ -1,12 +1,18 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { HomeScreen, HotelsScreen, DetailScreen } from '../Sreens';
+import { HomeScreen, HotelsScreen, DetailScreen, CitiesScreen } from '../Sreens';
 
 const MainNavigator = createStackNavigator({
     Home: {
         screen: HomeScreen,
         navigationOptions: {
             title: 'Alojamientos'
+        }
+    },
+    Cities: {
+        screen: CitiesScreen,
+        navigationOptions: {
+            title: 'Ciudades'
         }
     },
     Hotels: {

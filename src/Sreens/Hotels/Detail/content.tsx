@@ -5,6 +5,7 @@
 import React, { Component } from 'react';
 import MapView, { Marker } from 'react-native-maps';
 import { getHotelDetail } from '../../../Services'
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
 import {
@@ -48,7 +49,6 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
 
           <ScrollView style={styles.container}>
 
-
             <FlatList
               data={hotelDetail.images}
               horizontal={true}
@@ -57,12 +57,8 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
               renderItem={({ item }) =>
                 <Image
                   style={{ width: 400, height: 200 }}
-                  source={{ uri: item }}
-                />
-
-
-              }
-            />
+                  source={{ uri: item }} />
+              } />
 
 
             <View style={styles.infoContainer} >
@@ -74,7 +70,11 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
             <View style={styles.locationSection}>
 
               <Text style={styles.title}>{'Ubicación'} </Text>
-              <Text>{hotelDetail.location.address}</Text>
+
+              <View style={styles.subLocationSection}>
+                <Icon name={'my-location'} size={25} color="#616161" />
+                <Text>{hotelDetail.location.address}</Text>
+              </View>
 
               <MapView
                 style={styles.map}

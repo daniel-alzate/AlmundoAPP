@@ -19,6 +19,11 @@ export default class HomeScreen extends Component<HomeScreenProps> {
         </Text>
 
         <Button
+          title={'Seleccionar ciudad'}
+          onPress={() => this.props.navigation.navigate('Cities')}
+        />
+
+        <Button
           title="Ver todos los Hoteles"
           onPress={() => this.props.navigation.navigate('Hotels')}
         />

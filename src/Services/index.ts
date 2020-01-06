@@ -1,5 +1,15 @@
 const url = 'http://192.168.39.124:5001'
 
+export const getCities = async () => {
+    try {
+        const response = await fetch(`${url}/cities`)
+        const responseJson = await response.json()
+        return responseJson.cities
+    } catch (error) {
+        console.error(error)
+    }
+}
+
 export const getHotels = async () => {
     try {
         const response = await fetch(`${url}/hotels`)
