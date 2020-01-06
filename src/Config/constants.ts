@@ -8,3 +8,11 @@ export const Colors = {
     grey700: '#616161',
     grey900: '#212121'
 }
+
+export const NumberToArray: any = {
+    1: [1],
+    2: [1, 2],
+    3: [1, 2, 3],
+    4: [1, 2, 2, 4],
+    5: [1, 2, 3, 4, 5]
+}

@@ -7,6 +7,7 @@ import { View, Text, TouchableOpacity, Image, FlatList } from 'react-native'
 import styles from './style'
 import { HotelCardProps } from './interface'
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import StarRating from '../../../Components/StarRating'
 
 export default ({ id, name, stars, image, price, amenities, onSelectHotel }: HotelCardProps) => {
 
@@ -20,6 +21,8 @@ export default ({ id, name, stars, image, price, amenities, onSelectHotel }: Hot
       <View style={styles.infoContainer}>
 
         <Text numberOfLines={1} style={styles.name}>{name}</Text>
+
+        <StarRating score={stars}></StarRating>
 
         <View style={styles.priceContainer}>
           <Text style={styles.priceDescription}>{'Precio por noche:  '}</Text>
