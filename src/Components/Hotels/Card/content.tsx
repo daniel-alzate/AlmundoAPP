@@ -8,6 +8,7 @@ import styles from './style'
 import { HotelCardProps } from './interface'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import StarRating from '../../../Components/StarRating'
+import Amenities from '../Amenities'
 
 export default ({ id, name, stars, image, price, amenities, onSelectHotel }: HotelCardProps) => {
 
@@ -23,6 +24,8 @@ export default ({ id, name, stars, image, price, amenities, onSelectHotel }: Hot
         <Text numberOfLines={1} style={styles.name}>{name}</Text>
 
         <StarRating score={stars}></StarRating>
+
+        <Amenities amenities={amenities}></Amenities>
 
         <View style={styles.priceContainer}>
           <Text style={styles.priceDescription}>{'Precio por noche:  '}</Text>
