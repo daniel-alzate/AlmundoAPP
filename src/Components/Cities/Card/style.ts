@@ -6,18 +6,13 @@ export default StyleSheet.create({
         backgroundColor: Colors.white,
         marginVertical: 8,
         marginHorizontal: 16,
-        height: 50,
+        height: 60,
         borderRadius: 5,
-        flexDirection: 'column'
+        flexDirection: 'row',
+        alignItems:"center"
     },
-    image: {
-        flex: 1,
-        borderTopRightRadius: 5,
-        borderTopLeftRadius: 5,
-    },
-    infoContainer: {
-        height: 160,
-        padding: 15
+    icon: {
+        marginHorizontal: 16
     },
     name: {
         fontSize: 16,
