@@ -9,3 +9,13 @@ export const getHotels = async () => {
         console.error(error)
     }
 }
+
+export const getHotelDetail = async (id:String) => {
+    try {
+        const response = await fetch(`${url}/hotelDetail/${id}`)
+        const responseJson = await response.json()
+        return responseJson.hotelDetail
+    } catch (error) {
+        console.error(error)
+    }
+}

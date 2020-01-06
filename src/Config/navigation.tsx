@@ -1,6 +1,6 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { HomeScreen, HotelsScreen } from '../Sreens';
+import { HomeScreen, HotelsScreen, DetailScreen } from '../Sreens';
 
 const MainNavigator = createStackNavigator({
     Home: {
@@ -14,7 +14,13 @@ const MainNavigator = createStackNavigator({
         navigationOptions: {
             title: 'Hoteles'
         }
-    }
+    },
+    Detail: {
+        screen: DetailScreen,
+        navigationOptions: {
+            title: 'Tu hotel'
+        }
+    },
 });
 
 const App = createAppContainer(MainNavigator);
