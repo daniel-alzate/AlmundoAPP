@@ -24,6 +24,10 @@ export default StyleSheet.create({
         fontWeight: "bold",
         color: Colors.grey900
     },
+    location: {
+        fontSize: 12,
+        color: Colors.grey900
+    },
     starsSection: {
         marginVertical: 5,
         flexDirection: 'row',

@@ -6,11 +6,10 @@ import React from 'react'
 import { View, Text, TouchableOpacity, Image, FlatList } from 'react-native'
 import styles from './style'
 import { HotelCardProps } from './interface'
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import StarRating from '../../../Components/StarRating'
 import Amenities from '../Amenities'
 
-export default ({ id, name, stars, image, price, amenities, onSelectHotel }: HotelCardProps) => {
+export default ({ id, name = "", stars = 0, image = "", price = 0, amenities = [], city = {}, onSelectHotel }: HotelCardProps) => {
 
   return (
 
@@ -23,7 +22,9 @@ export default ({ id, name, stars, image, price, amenities, onSelectHotel }: Hot
 
         <Text numberOfLines={1} style={styles.name}>{name}</Text>
 
-        <StarRating score={stars}></StarRating>
+        <Text numberOfLines={1} style={styles.location}>{city.name}, {city.country}</Text>
+
+        <StarRating score={stars} />
 
         <Amenities amenities={amenities}></Amenities>
 

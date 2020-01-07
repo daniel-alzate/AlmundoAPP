@@ -4,7 +4,7 @@ import styles from './style'
 import { CityCardProps } from './interface'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default ({ name, country, onSelectCity }: CityCardProps) => {
+export default ({ name="", country="", onSelectCity }: CityCardProps) => {
 
     return (
 

@@ -8,7 +8,7 @@ import styles from './style'
 import { AmenitiesProps } from './interface'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default ({ amenities, customStyle }: AmenitiesProps) => {
+export default ({ amenities=[] }: AmenitiesProps) => {
 
   return (
 

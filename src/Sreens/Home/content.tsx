@@ -3,7 +3,8 @@ import {
   SafeAreaView,
   View,
   Text,
-  Button
+  Button,
+  TouchableOpacity
 } from 'react-native';
 import styles from './style'
 
@@ -12,23 +13,17 @@ export default class HomeScreen extends Component<HomeScreenProps> {
     return (
       <View style={styles.container}>
 
-        <Text style={styles.location}>
-          {this.props.navigation.getParam('name', '--')}
-          {', '}
-          {this.props.navigation.getParam('country', '--')}
-        </Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => this.props.navigation.navigate('Cities')}>
+          <Text> {'Hoteles Por ciudad'}</Text>
+        </TouchableOpacity>
 
-        <Button
-          accessibilityLabel={'Hoteles Por ciudad'}
-          title={'Hoteles Por ciudad'}
-          onPress={() => this.props.navigation.navigate('Cities')}
-        />
-
-        <Button
-          title={'Ver todos los Hoteles'}
-          accessibilityLabel={'Ver todos los Hoteles'}
-          onPress={() => this.props.navigation.navigate('Hotels')}
-        />
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => this.props.navigation.navigate('Hotels')}>
+          <Text>{'Ver todos los Hoteles'}</Text>
+        </TouchableOpacity>
 
       </View>
     );

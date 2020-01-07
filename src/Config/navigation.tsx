@@ -12,7 +12,10 @@ const MainNavigator = createStackNavigator({
     Cities: {
         screen: CitiesScreen,
         navigationOptions: {
-            title: 'Ciudades'
+            title: 'Ciudades',
+            headerStyle: {
+                backgroundColor: '#f4511e',
+              },
         }
     },
     Hotels: {

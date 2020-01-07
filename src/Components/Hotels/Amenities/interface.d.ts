@@ -1,4 +1,3 @@
 export interface AmenitiesProps {
-  amenities: Array<string>,
-  customStyle?: any
+  amenities: Array<string>
 }

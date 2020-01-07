@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import styles from './style'
 import { NumberToArray } from '../../Config/constants'
 
-export default ({ styleStar, score }: IPropsStarRaiting) => {
+export default ({ score = 0 }: IPropsStarRaiting) => {
 
     return (
         score > 0 ?

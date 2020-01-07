@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import MapView, { Marker } from 'react-native-maps';
 import { getHotelDetail } from '../../../Services'
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import StarRating from '../../../Components/StarRating'
 
 
 import {
@@ -49,7 +50,7 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
               data={hotelDetail.images}
               horizontal={true}
               showsHorizontalScrollIndicator={false}
-              keyExtractor={(item: any, index) => item+index}
+              keyExtractor={(item: any, index) => item + index}
               renderItem={({ item }) =>
                 <Image
                   style={{ width: 400, height: 200 }}
@@ -59,8 +60,8 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
 
             <View style={styles.infoContainer} >
               <Text style={styles.title}>{name}</Text>
-              <Text>{'Ciudad, Pais'}</Text>
-              <Text>{stars}{' estrellas'}</Text>
+              <Text numberOfLines={1} style={styles.location}>{hotelDetail.city.name}, {hotelDetail.city.country}</Text>
+              <StarRating score={stars}></StarRating>
             </View>
 
             <View style={styles.locationSection}>

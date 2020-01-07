@@ -20,6 +20,10 @@ export default StyleSheet.create({
         fontSize: 16,
         fontWeight: "bold",
     },
+    location: {
+        fontSize: 12,
+        color: Colors.grey900
+    },
     locationSection: {
         height: 300,
         marginTop: 2,

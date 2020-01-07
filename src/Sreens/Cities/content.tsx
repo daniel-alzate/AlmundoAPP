@@ -14,7 +14,7 @@ import {
 
 export default class CitiesList extends Component<CitiesListProps, CitiesListState> {
 
-  constructor(props) {
+  constructor(props: CitiesListProps) {
     super(props)
     this.state = {
       cities: []
