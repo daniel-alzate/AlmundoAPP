@@ -34,6 +34,10 @@ export default StyleSheet.create({
         flexDirection:"row",
         marginVertical:10
     },
+    icon: {
+        marginHorizontal: 5,
+        bottom:2
+    },
     descriptionSection: {
         marginTop: 2,
         backgroundColor: Colors.white,

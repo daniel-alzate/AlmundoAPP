@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Colors } from '../../Config/constants'
 
 export default StyleSheet.create({
     container: {
@@ -9,18 +10,19 @@ export default StyleSheet.create({
     location: {
         textAlign: 'center'
     },
-
     button: {
         alignItems: 'center',
-        backgroundColor: '#673ab7',
+        backgroundColor: Colors.purple500,
         padding: 10,
         borderRadius: 20,
-        marginVertical:10
-        
+        marginVertical: 20
+
     },
     buttonText: {
-        fontSize:15
-        
+        fontSize: 17,
+        color: Colors.white
+
+
     },
     countContainer: {
         alignItems: 'center',

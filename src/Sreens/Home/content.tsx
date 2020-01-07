@@ -16,13 +16,13 @@ export default class HomeScreen extends Component<HomeScreenProps> {
         <TouchableOpacity
           style={styles.button}
           onPress={() => this.props.navigation.navigate('Cities')}>
-          <Text> {'Hoteles Por ciudad'}</Text>
+          <Text style={styles.buttonText}> {'Hoteles por ciudad'}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
           onPress={() => this.props.navigation.navigate('Hotels')}>
-          <Text>{'Ver todos los Hoteles'}</Text>
+          <Text style={styles.buttonText}>{'Ver todos los Hoteles'}</Text>
         </TouchableOpacity>
 
       </View>

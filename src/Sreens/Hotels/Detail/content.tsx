@@ -53,7 +53,7 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
               keyExtractor={(item: any, index) => item + index}
               renderItem={({ item }) =>
                 <Image
-                  style={{ width: 400, height: 200 }}
+                  style={{ width: 300, height: 200, marginRight:5 }}
                   source={{ uri: item }} />
               } />
 
@@ -69,7 +69,7 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
               <Text style={styles.title}>{'Ubicación'} </Text>
 
               <View style={styles.subLocationSection}>
-                <Icon name={'my-location'} size={25} color="#616161" />
+                <Icon style={styles.icon} name={'my-location'} size={25} color="#616161" />
                 <Text>{hotelDetail.location.address}</Text>
               </View>
 
