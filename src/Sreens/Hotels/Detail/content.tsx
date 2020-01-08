@@ -30,37 +30,49 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
   }
 
   componentDidMount() {
-    getHotelDetail(this.props.navigation.state.params._id).then(hotelDetail => this.setState({ hotelDetail: hotelDetail }))
+    getHotelDetail(this.props.navigation.state.params._id).then(hotelDetail => this.setState({ hotelDetail }))
+  }
+
+  isLoading = () => {
+    if (this.state.hotelDetail === "") {
+      return true
+    } else {
+      return false
+    }
   }
 
   render() {
 
-    const { name, stars, price } = this.props.navigation.state.params;
-
-    const { hotelDetail } = this.state;
+    const {
+      images = "",
+      name = "",
+      city = { name: "", country: "" },
+      stars = 0,
+      location = { coordinate: { latitude: 0, longitude: 0 }, address: "" },
+      description = "" } = this.state.hotelDetail
 
     return (
       <View >
 
-        {hotelDetail === "" ? <ActivityIndicator size='large' color='rgba(255, 143, 41, 1.0)' /> :
+        {this.isLoading() ? <ActivityIndicator size='large' color='rgba(255, 143, 41, 1.0)' /> :
 
           <ScrollView style={styles.container}>
 
             <FlatList
-              data={hotelDetail.images}
+              data={images}
               horizontal={true}
               showsHorizontalScrollIndicator={false}
               keyExtractor={(item: any, index) => item + index}
               renderItem={({ item }) =>
                 <Image
-                  style={{ width: 300, height: 200, marginRight:5 }}
+                  style={{ width: 300, height: 200, marginRight: 5 }}
                   source={{ uri: item }} />
               } />
 
 
             <View style={styles.infoContainer} >
               <Text style={styles.title}>{name}</Text>
-              <Text numberOfLines={1} style={styles.location}>{hotelDetail.city.name}, {hotelDetail.city.country}</Text>
+              <Text numberOfLines={1} style={styles.location}>{city.name}, {city.country}</Text>
               <StarRating score={stars}></StarRating>
             </View>
 
@@ -70,26 +82,26 @@ export default class HotelDetail extends Component<HotelDetailProps, HotelDetail
 
               <View style={styles.subLocationSection}>
                 <Icon style={styles.icon} name={'my-location'} size={25} color="#616161" />
-                <Text>{hotelDetail.location.address}</Text>
+                <Text>{location.address}</Text>
               </View>
 
               <MapView
                 style={styles.map}
                 initialRegion={{
-                  latitude: hotelDetail.location.coordinate.latitude,
-                  longitude: hotelDetail.location.coordinate.longitude,
+                  latitude: location.coordinate.latitude,
+                  longitude: location.coordinate.longitude,
                   latitudeDelta: 0.005,
                   longitudeDelta: 0.005,
                 }}>
                 <Marker
-                  coordinate={hotelDetail.location.coordinate} />
+                  coordinate={location.coordinate} />
               </MapView>
 
             </View>
 
             <View style={styles.descriptionSection}>
               <Text style={styles.title}>{'Descripción'}</Text>
-              <Text>{hotelDetail.description}</Text>
+              <Text>{description}</Text>
             </View>
 
 

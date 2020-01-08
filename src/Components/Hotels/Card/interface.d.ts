@@ -1,5 +1,5 @@
 export interface HotelCardProps {
-  id: string,
+  _id: string,
   name: string,
   stars: number,
   image: string,

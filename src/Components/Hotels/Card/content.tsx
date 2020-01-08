@@ -9,7 +9,7 @@ import { HotelCardProps } from './interface'
 import StarRating from '../../../Components/StarRating'
 import Amenities from '../Amenities'
 
-export default ({ id, name = "", stars = 0, image = "", price = 0, amenities = [], city = {}, onSelectHotel }: HotelCardProps) => {
+export default ({ _id, name = "", stars = 0, image = "", price = 0, amenities = [], city = { name: "", country: "" }, onSelectHotel }: HotelCardProps) => {
 
   return (
 

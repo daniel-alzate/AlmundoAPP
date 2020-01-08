@@ -8,7 +8,7 @@ import styles from './style'
 import { AmenitiesProps } from './interface'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default ({ amenities=[] }: AmenitiesProps) => {
+export default ({ amenities = [] }: AmenitiesProps) => {
 
   return (
 
@@ -17,8 +17,8 @@ export default ({ amenities=[] }: AmenitiesProps) => {
         data={amenities}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
-        keyExtractor={(item, index) => item+index}
-        renderItem={({ item }) =>
+        keyExtractor={(item, index) => item + index}
+        renderItem={({ item = '' }) =>
           <Icon name={item} size={20} color="#616161" />
         } />
     </View>
